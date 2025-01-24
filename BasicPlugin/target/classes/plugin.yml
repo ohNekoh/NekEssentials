@@ -1,0 +1,23 @@
+name: BasicPlugin
+version: '1.0-SNAPSHOT'
+main: me.nekoh.BasicPlugin
+api-version: '1.20.1'
+description: A simple plugin
+commands:
+  god:
+    description: You become god (kinda)
+    permission: nekessentials.staff.god
+  kill:
+    description: You can become a murderer (not recommended)
+    permission: nekessentials.staff.kill
+permissions:
+  nekessentials.*:
+    children:
+      nekessentials.staff.*:
+  nekessentials.staff.*:
+    children:
+      nekessentials.staff.god:
+      nekessentials:
+        staff:
+          kill:
+
